@@ -1,0 +1,4 @@
+highlight Comment ctermfg=green
+nnoremap b q
+nnoremap q b
+set ideajoin

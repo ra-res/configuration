@@ -6,6 +6,9 @@ set ai
 set number
 set hlsearch
 set ruler
+set autoindent 
+set cindent
+set background="dark"
 highlight Comment ctermfg=green
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i

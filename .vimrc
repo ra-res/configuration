@@ -9,6 +9,7 @@ set ruler
 set autoindent
 set cindent
 set t_Co=256
+set re=2
 filetype plugin on
 filetype plugin indent on 
 inoremap ( ()<Esc>i

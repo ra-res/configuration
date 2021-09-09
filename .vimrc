@@ -40,12 +40,12 @@ augroup END
 
 highlight Comment ctermfg=green
 highlight String ctermfg=1
-""highlight Normal ctermfg=white
-highlight Function ctermfg=white
-highlight NonText ctermfg=white
 highlight Special ctermfg=Magenta
+highlight Function ctermfg=2
 highlight Identifier ctermfg=3 cterm=none
 highlight Number ctermfg=1
 highlight JavaScriptValue ctermfg=1
 highlight Boolean ctermfg=3
 highlight Statement ctermfg=6
+highlight Conditional ctermfg=3
+highlight Repeat ctermfg=3

@@ -16,3 +16,7 @@ cp .tmux.conf ~/.tmux.conf
 
 # intellij
 cp .ideavimrc ~/.ideavimrc
+
+# Xmodmap
+cp .Xmodmap ~/.Xmodmap  
+xmodmap ~/.Xmodmap  

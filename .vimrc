@@ -12,13 +12,13 @@ set t_Co=256
 set re=2
 filetype plugin on
 filetype plugin indent on 
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap {<CR> {<CR>}<Esc>O
-inoremap [ []<Esc>i
-inoremap < <><Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
+"inoremap ( ()<Esc>i
+"inoremap { {}<Esc>i
+"inoremap {<CR> {<CR>}<Esc>O
+"inoremap [ []<Esc>i
+"inoremap < <><Esc>i
+"inoremap ' ''<Esc>i
+"inoremap " ""<Esc>i
 nnoremap b q
 nnoremap q b
 imap jj <Esc>

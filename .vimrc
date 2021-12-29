@@ -85,6 +85,8 @@ let mapleader = "," " map leader to comma
 
 call plug#begin()
 
+Plug 'preservim/nerdtree' " Nerdtree
+
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
@@ -152,11 +154,14 @@ autocmd CursorHoldI * :call <SID>show_hover_doc()
 autocmd CursorHold * :call <SID>show_hover_doc()
 """
 
-
-"""Navigate to next error
+"""NerdTree
+let NERDTreeQuitOnOpen=1
+" Ctrl + key
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 """
 
-" Install vim-plug if not found
+" Install plug-vim if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

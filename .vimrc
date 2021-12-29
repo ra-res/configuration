@@ -35,7 +35,10 @@ colorscheme desert
 
 augroup SyntaxSettings
     autocmd!
-    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+    autocmd BufNewFile,BufRead *.tsx let b:tsx_ext_found = 1
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+    autocmd BufNewFile,BufRead *.js set filetype=typescript.tsx
+    autocmd BufNewFile,BufRead *.jsx set filetype=typescript.tsx
 augroup END
 
 highlight Comment ctermfg=green
@@ -49,6 +52,15 @@ highlight Boolean ctermfg=3
 highlight Statement ctermfg=6
 highlight Conditional ctermfg=3
 highlight Repeat ctermfg=3
+
+"Cursor settings:
+
+"  1 -> blinking block
+"  2 -> solid block 
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
 
 "Gnome Terminal
 if has("autocmd")
@@ -65,19 +77,11 @@ endif
 
 "MacOS
 "Mode Settings
-
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
-"Cursor settings:
-
-"  1 -> blinking block
-"  2 -> solid block 
-"  3 -> blinking underscore
-"  4 -> solid underscore
-"  5 -> blinking vertical bar
-"  6 -> solid vertical bar
+let mapleader = "," " map leader to comma
 
 call plug#begin()
 
@@ -91,21 +95,7 @@ call plug#end()
 
 
 " CoC Extensions
-let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
-
-" Shortcuts 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-
-nmap <leader>f   :CocCommand prettier.formatFile<CR>
+let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json', 'coc-tslint-plugin']
 
 " Add CoC Prettier if prettier is installed
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -117,6 +107,54 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
 
+""" Shortcuts for Coc
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>do  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>rn <Plug>(coc-rename)
+
+" Format file
+nmap <leader>f   :CocCommand prettier.formatFile<CR>
+
+" Navigate to next error
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" List diagnostics
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+
+" List of workspace symbols
+nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
+
+"""
+
+""" Code to show diagnostics and docs automatically 
+" Press K to show diagnostics
+nnoremap <silent> K :call CocAction('doHover')<CR>
+
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(100, 'ShowDocIfNoDiagnostic')
+endfunction
+
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
+"""
+
+
+"""Navigate to next error
+"""
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -128,5 +166,4 @@ endif
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
-
 

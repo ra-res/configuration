@@ -53,7 +53,7 @@ highlight Statement ctermfg=6
 highlight Conditional ctermfg=3
 highlight Repeat ctermfg=3
 
-"Cursor settings:
+"""Cursor settings:
 
 "  1 -> blinking block
 "  2 -> solid block 
@@ -74,12 +74,12 @@ if has("autocmd")
   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
 
-
 "MacOS
 "Mode Settings
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+"""
 
 let mapleader = "," " map leader to comma
 
@@ -110,19 +110,19 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
 endif
 
 """ Shortcuts for Coc
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent>gd <Plug>(coc-definition)
+nmap <silent>gy <Plug>(coc-type-definition)
+nmap <silent>gi <Plug>(coc-implementation)
+nmap <silent>gr <Plug>(coc-references)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>do  <Plug>(coc-codeaction)
+nmap <leader>do <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>qf <Plug>(coc-fix-current)
 nmap <leader>rn <Plug>(coc-rename)
 
 " Format file
-nmap <leader>f   :CocCommand prettier.formatFile<CR>
+nmap <leader>f :CocCommand prettier.formatFile<CR>
 
 " Navigate to next error
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -138,7 +138,7 @@ nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
 
 """ Code to show diagnostics and docs automatically 
 " Press K to show diagnostics
-nnoremap <silent> K :call CocAction('doHover')<CR>
+nnoremap <silent>K :call CocAction('doHover')<CR>
 
 function! ShowDocIfNoDiagnostic(timer_id)
   if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
@@ -156,6 +156,7 @@ autocmd CursorHold * :call <SID>show_hover_doc()
 
 """NerdTree
 let NERDTreeQuitOnOpen=1
+
 " Ctrl + key
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>

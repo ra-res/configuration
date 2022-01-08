@@ -31,7 +31,6 @@ set ttimeoutlen=20           " keycode timeout 20ms
 "highlight Normal     cterm=NONE ctermbg=17              gui=NONE guibg=#00005f
 "highlight StatusLine cterm=NONE ctermbg=231 ctermfg=160 gui=NONE guibg=#ffffff guifg=#d70000
 
-colorscheme desert 
 
 augroup SyntaxSettings
     autocmd!
@@ -40,19 +39,6 @@ augroup SyntaxSettings
     autocmd BufNewFile,BufRead *.js set filetype=typescript.tsx
     autocmd BufNewFile,BufRead *.jsx set filetype=typescript.tsx
 augroup END
-
-highlight Comment ctermfg=green
-highlight String ctermfg=1
-highlight Special ctermfg=Magenta
-highlight Function ctermfg=2
-highlight Identifier ctermfg=3 cterm=none
-highlight Number ctermfg=1
-highlight JavaScriptValue ctermfg=1
-highlight Boolean ctermfg=3
-highlight Statement ctermfg=6
-highlight Conditional ctermfg=3
-highlight Repeat ctermfg=3
-
 """Cursor settings:
 
 "  1 -> blinking block
@@ -86,14 +72,32 @@ let mapleader = "," " map leader to comma
 call plug#begin()
 
 Plug 'preservim/nerdtree' " Nerdtree
-
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code completion
+Plug 'danilo-augusto/vim-afterglow'
 
 call plug#end()
+
+let g:airline_theme='afterglow'
+let g:afterglow_inherit_background=1
+colorscheme afterglow
+
+"colorscheme desert 
+highlight Comment ctermfg=darkgreen
+highlight String ctermfg=1
+"highlight Normal ctermfg=grey ctermbg=black
+"highlight Special ctermfg=Magenta
+"highlight Function ctermfg=2
+"highlight Identifier ctermfg=3 cterm=none
+"highlight Number ctermfg=1
+"highlight JavaScriptValue ctermfg=1
+"highlight Boolean ctermfg=3
+"highlight Statement ctermfg=6
+"highlight Conditional ctermfg=3
+"highlight Repeat ctermfg=3
 
 
 " CoC Extensions

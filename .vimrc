@@ -77,6 +77,9 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code completion
+"Plug 'danilo-augusto/vim-afterglow'
+"Plug 'doums/darcula'
+"Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
@@ -85,8 +88,9 @@ set termguicolors
 
 "colorscheme desert 
 set background=light
+let g:gruvbox_contrast_light='hard'
 colorscheme gruvbox
-"
+
 "highlight Comment ctermfg=darkgreen
 "highlight String ctermfg=1
 "highlight Normal ctermfg=grey ctermbg=black

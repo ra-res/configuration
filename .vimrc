@@ -77,17 +77,18 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code completion
-Plug 'danilo-augusto/vim-afterglow'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-let g:airline_theme='afterglow'
-let g:afterglow_inherit_background=1
-colorscheme afterglow
+set termguicolors
 
 "colorscheme desert 
-highlight Comment ctermfg=darkgreen
-highlight String ctermfg=1
+set background=light
+colorscheme gruvbox
+"
+"highlight Comment ctermfg=darkgreen
+"highlight String ctermfg=1
 "highlight Normal ctermfg=grey ctermbg=black
 "highlight Special ctermfg=Magenta
 "highlight Function ctermfg=2
@@ -99,6 +100,26 @@ highlight String ctermfg=1
 "highlight Conditional ctermfg=3
 "highlight Repeat ctermfg=3
 
+"Fix COC Underlining 
+hi cocerrorhighlight ctermfg=red guifg=#c4384b gui=undercurl term=undercurl
+hi cocwarninghighlight ctermfg=yellow guifg=#c4ab39 gui=undercurl term=undercurl
+
+" Coc Colours for darcula theme
+"hi! link CocErrorSign ErrorSign
+"hi! link CocWarningSign WarningSign
+"hi! link CocInfoSign InfoSign
+"hi! link CocHintSign HintSign
+"hi! link CocErrorFloat Pmenu
+"hi! link CocWarningFloat Pmenu
+"hi! link CocInfoFloat Pmenu
+"hi! link CocHintFloat Pmenu
+"hi! link CocHighlightText IdentifierUnderCaret
+"hi! link CocHighlightRead IdentifierUnderCaret
+"hi! link CocHighlightWrite IdentifierUnderCaretWrite
+"hi! link CocErrorHighlight CodeError
+"hi! link CocWarningHighlight CodeWarning
+"hi! link CocInfoHighlight CodeInfo
+"hi! link CocHintHighlight CodeHint
 
 " CoC Extensions
 let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json', 'coc-tslint-plugin']

@@ -3,7 +3,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set ai
-set number
+set relativenumber
 set hlsearch
 set ruler
 set autoindent
@@ -12,13 +12,6 @@ set t_Co=256
 set re=2
 filetype plugin on
 filetype plugin indent on 
-"inoremap ( ()<Esc>i
-"inoremap { {}<Esc>i
-"inoremap {<CR> {<CR>}<Esc>O
-"inoremap [ []<Esc>i
-"inoremap < <><Esc>i
-"inoremap ' ''<Esc>i
-"inoremap " ""<Esc>i
 nnoremap b q
 nnoremap q b
 imap jj <Esc>
@@ -31,7 +24,6 @@ set ttimeoutlen=20           " keycode timeout 20ms
 "highlight Normal     cterm=NONE ctermbg=17              gui=NONE guibg=#00005f
 "highlight StatusLine cterm=NONE ctermbg=231 ctermfg=160 gui=NONE guibg=#ffffff guifg=#d70000
 
-
 augroup SyntaxSettings
     autocmd!
     autocmd BufNewFile,BufRead *.tsx let b:tsx_ext_found = 1
@@ -39,8 +31,8 @@ augroup SyntaxSettings
     autocmd BufNewFile,BufRead *.js set filetype=typescript.tsx
     autocmd BufNewFile,BufRead *.jsx set filetype=typescript.tsx
 augroup END
-"""Cursor settings:
 
+"""Cursor settings:
 "  1 -> blinking block
 "  2 -> solid block 
 "  3 -> blinking underscore
@@ -77,10 +69,9 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code completion
-"Plug 'danilo-augusto/vim-afterglow'
-"Plug 'doums/darcula'
-"Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -201,4 +192,5 @@ endif
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
+
 

@@ -75,11 +75,11 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-set termguicolors
+" set termguicolors
 
 "colorscheme desert 
-set background=light
-let g:gruvbox_contrast_light='hard'
+set background=dark
+let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 
 "highlight Comment ctermfg=darkgreen

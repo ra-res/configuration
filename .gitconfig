@@ -1,6 +1,9 @@
 [credential]
 	helper = store
 [user]
-	email = "enter-email-here"
+	email =
 [core]
 	editor = vim
+[pager]
+  branch = false
+	diff = false

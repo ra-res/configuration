@@ -24,7 +24,7 @@ set autoread
 
 " http://stackoverflow.com/questions/2490227/how-does-vims-autoread-work#20418591
 au FocusGained,BufEnter * :silent! !
-"
+
 " use Unicode
 set encoding=utf-8
 
@@ -141,7 +141,7 @@ Plug 'tpope/vim-vinegar'
 "Plug 'APZelos/blamer.nvim'
 
 " https://github.com/fenetikm/falcon/wiki/Installation
-Plug 'fenetikm/falcon'
+"Plug 'fenetikm/falcon'
 
 " https://github.com/preservim/nerdtree
 Plug 'preservim/nerdtree' " Nerdtree
@@ -167,6 +167,9 @@ Plug 'nvim-lua/plenary.nvim'
 " https://github.com/nvim-telescope/telescope.nvim
 Plug 'nvim-telescope/telescope.nvim'
 
+" https://github.com/morhetz/gruvbox
+Plug 'morhetz/gruvbox'
+
 " Initialize plugin system
 call plug#end()
 
@@ -188,15 +191,16 @@ if has("termguicolors")
 endif
 
 " Dark scheme
-colorscheme falcon
+"colorscheme falcon
+colorscheme gruvbox
 
 " Show character column
 "set colorcolumn=80
 
+""" GIT BLAMER
 "let g:blamer_enabled = 1
 " %a is the day of week, in case it's needed
 "let g:blamer_date_format = '%e %b %Y'
-
 "highlight Blamer guifg=darkorange
 
 """

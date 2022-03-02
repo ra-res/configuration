@@ -12,6 +12,7 @@
      "less"
    ],
    "tsserver.formatOnType": true,
-   "coc.preferences.formatOnType": true
+   "diagnostic.virtualText": true,
+   "diagnostic.virtualTextCurrentLineOnly": false
 }
 

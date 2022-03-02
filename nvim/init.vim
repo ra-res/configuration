@@ -170,6 +170,9 @@ Plug 'nvim-telescope/telescope.nvim'
 " https://github.com/morhetz/gruvbox
 Plug 'morhetz/gruvbox'
 
+" https://github.com/airblade/vim-rooter
+Plug 'airblade/vim-rooter'
+
 " Initialize plugin system
 call plug#end()
 
@@ -218,6 +221,10 @@ imap jj <Esc>
 let mapleader = ","
 
 """ TELESCOPE
+
+let g:rooter_patterns = ['.git', '.svn', 'package.json', '!node_modules']
+
+nnoremap <expr>sp ':Telescope find_files cwd='.FindRootDirectory().'/<cr>'
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>

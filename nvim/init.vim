@@ -224,7 +224,8 @@ let mapleader = ","
 
 let g:rooter_patterns = ['.git', '.svn', 'package.json', '!node_modules']
 
-nnoremap <expr>sp ':Telescope find_files cwd='.FindRootDirectory().'/<cr>'
+nnoremap <expr><leader>fp ':Telescope find_files cwd='.FindRootDirectory().'/<cr>'
+nnoremap <expr><leader>gp ':Telescope live_grep cwd='.FindRootDirectory().'/<cr>'
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>

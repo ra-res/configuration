@@ -161,8 +161,14 @@ Plug 'jparise/vim-graphql'        " GraphQL syntax
 " https://github.com/neoclide/coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Code completion
 
+" https://github.com/neoclide/coc-jest
+Plug 'neoclide/coc-jest'
+
 " https://github.com/
 Plug 'nvim-lua/plenary.nvim'
+
+" https://github.com/ThePrimeagen/harpoon
+Plug 'ThePrimeagen/harpoon'
 
 " https://github.com/nvim-telescope/telescope.nvim
 Plug 'nvim-telescope/telescope.nvim'
@@ -226,6 +232,7 @@ let g:rooter_patterns = ['.git', '.svn', 'package.json', '!node_modules']
 
 nnoremap <expr><leader>fp ':Telescope find_files cwd='.FindRootDirectory().'/<cr>'
 nnoremap <expr><leader>gp ':Telescope live_grep cwd='.FindRootDirectory().'/<cr>'
+nnoremap <leader>fz <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -245,6 +252,8 @@ endif
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
+" Run jest tests 
+nnoremap <leader>te :call CocAction('runCommand', 'jest.singleTest')<CR>
 
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gy <Plug>(coc-type-definition)

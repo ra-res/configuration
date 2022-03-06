@@ -174,7 +174,7 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope.nvim'
 
 " https://github.com/morhetz/gruvbox
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " https://github.com/airblade/vim-rooter
 Plug 'airblade/vim-rooter'
@@ -197,15 +197,15 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 " Neovim only
-"if has("termguicolors")
-"    set termguicolors
-"endif
+if has("termguicolors")
+    set termguicolors
+endif
 
 " Dark scheme
 "colorscheme falcon
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme peachpuff
-colorscheme onedark
+"colorscheme onedark
 highlight Comment ctermfg=green
 highlight String ctermfg=red
 

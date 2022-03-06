@@ -174,10 +174,13 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope.nvim'
 
 " https://github.com/morhetz/gruvbox
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 
 " https://github.com/airblade/vim-rooter
 Plug 'airblade/vim-rooter'
+
+" https://github.com/joshdick/onedark.vim
+Plug 'joshdick/onedark.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -193,15 +196,18 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-"
 " Neovim only
-if has("termguicolors")
-    set termguicolors
-endif
+"if has("termguicolors")
+"    set termguicolors
+"endif
 
 " Dark scheme
 "colorscheme falcon
-colorscheme gruvbox
+"colorscheme gruvbox
+"colorscheme peachpuff
+colorscheme onedark
+highlight Comment ctermfg=green
+highlight String ctermfg=red
 
 " Show character column
 "set colorcolumn=80
@@ -303,4 +309,3 @@ let NERDTreeQuitOnOpen=1
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 """
-

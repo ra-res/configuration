@@ -20,3 +20,7 @@ cp .ideavimrc ~/.ideavimrc
 # Xmodmap
 cp .Xmodmap ~/.Xmodmap  
 xmodmap ~/.Xmodmap  
+
+# nvim
+rm -rf  ~/.config/nvim
+cp -r ./nvim_lua/ ~/.config/nvim

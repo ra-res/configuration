@@ -1,0 +1,3 @@
+[submodule "nvim_lua"]
+	path = nvim_lua
+	url = https://github.com/ra-res/nvim

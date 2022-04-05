@@ -13,7 +13,7 @@
 " e.g., `:find vim* <TAB>`
 set path+=**
 
-" Syntax highlight
+" Syntax highlight"
 syntax enable
 
 " number of lines at the beginning and end of files checked for file-specific vars
@@ -172,6 +172,9 @@ Plug 'ThePrimeagen/harpoon'
 
 " https://github.com/nvim-telescope/telescope.nvim
 Plug 'nvim-telescope/telescope.nvim'
+
+" https://github.com/nvim-treesitter/nvim-treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " https://github.com/morhetz/gruvbox
 Plug 'morhetz/gruvbox'

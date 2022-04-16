@@ -1,3 +1,6 @@
 [submodule "nvim_lua"]
 	path = nvim_lua
 	url = https://github.com/ra-res/nvim
+[submodule "peachpuff-vscode"]
+	path = peachpuff-vscode
+	url = https://github.com/ra-res/peachpuff-vscode

@@ -3,7 +3,7 @@
 [user]
 	email =
 [core]
-	editor = vim
+	editor = nvim 
 [pager]
   branch = false
 	diff = false

@@ -1,9 +1,9 @@
 [credential]
-	helper = store
+    helper = store
 [user]
-	email =
+    email =
 [core]
-	editor = nvim 
+    editor = nvim 
 [pager]
-  branch = false
-	diff = false
+    branch = false
+    diff = false

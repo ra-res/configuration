@@ -2,6 +2,7 @@
     helper = store
 [user]
     email =
+    user =
 [core]
     editor = nvim 
 [pager]

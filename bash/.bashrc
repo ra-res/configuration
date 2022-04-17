@@ -2,7 +2,9 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-alias ls='ls -G'
+alias ls='ls --color'
+# for macos 
+# alias ls='ls -G'
 alias ..='cd ..'
 alias ~='cd ~'
 # export PS1='\u:\[\e[33m\]\w\[\e[0m\]\$ '

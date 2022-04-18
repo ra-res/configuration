@@ -1,3 +1,4 @@
+stow alacritty
 stow bash
 stow prettier
 stow zsh

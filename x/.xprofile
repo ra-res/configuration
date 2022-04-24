@@ -5,7 +5,7 @@ xset r rate 210 40
 xrandr --output DP-0 --mode 1920x1080 --rate 144
 
 # zsh config dir
-# export ZDOTDIR=$HOME/.config/zsh
+export ZDOTDIR=$HOME/.config/zsh
 
 # Environment vars set everywhere
 export EDITOR="nvim"

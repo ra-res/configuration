@@ -37,8 +37,16 @@ cursor:
     blinking: Never
 
 font:
-  size: 11
-  ligatures: true
+  # macos font
+  # normal:
+  #  family: CodeNewRoman Nerd Font
+  # bold:
+  #  family: CodeNewRoman Nerd Font
+  # italic:
+  #  family: CodeNewRoman Nerd Font
+  size: 12
+  # ligatures: true
+
 
 window:
   padding:

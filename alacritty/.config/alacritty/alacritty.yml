@@ -37,13 +37,12 @@ cursor:
     blinking: Never
 
 font:
-  # macos font
-  # normal:
-  #  family: CodeNewRoman Nerd Font
-  # bold:
-  #  family: CodeNewRoman Nerd Font
-  # italic:
-  #  family: CodeNewRoman Nerd Font
+  normal:
+   family: Hack Nerd Font
+  bold:
+   family: Hack Nerd Font
+  italic:
+   family: Hack Nerd Font
   size: 12
   # ligatures: true
 

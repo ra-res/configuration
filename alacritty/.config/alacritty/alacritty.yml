@@ -52,12 +52,12 @@ window:
     x: 2
     y: 2
   # scrolling:
-  #   # Maximum number of lines in the scrollback buffer.
-  #   # Specifying '0' will disable scrolling.
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
   history: 10000
-  #   # Number of lines the viewport will move for every line scrolled when
-  #   # scrollback is enabled (history > 0).
-  #   multiplier: 10
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  # multiplier: 10
 
 # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true

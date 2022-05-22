@@ -4,5 +4,6 @@ SAVEHIST=1000000
 
 # Environment variables set everywhere
 export EDITOR="nvim"
+export VISUAL="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"

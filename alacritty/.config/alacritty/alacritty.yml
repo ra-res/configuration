@@ -38,11 +38,11 @@ cursor:
 
 font:
   normal:
-   family: Hack Nerd Font
+   family: DaddyTimeMono Nerd Font
   bold:
-   family: Hack Nerd Font
+   family: DaddyTimeMono Nerd Font
   italic:
-   family: Hack Nerd Font
+   family: DaddyTimeMono Nerd Font
   size: 12
   # ligatures: true
 

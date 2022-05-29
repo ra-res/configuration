@@ -64,6 +64,9 @@ bindkey "^j" down-line-or-beginning-search # Down
 # export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
 compinit
 
+# Load nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line

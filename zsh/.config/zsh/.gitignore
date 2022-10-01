@@ -2,4 +2,4 @@
 .zsh_history
 .zcomp*
 
-./custom/plugins
+custom/plugins/

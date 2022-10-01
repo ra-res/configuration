@@ -1,284 +1,134 @@
 {
-    "workbench.sideBar.location": "right",
-    "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative",
-    "editor.cursorBlinking": "solid",
-    "window.zoomLevel": 1,
-    "editor.renderLineHighlight": "none",
-    "Lua.telemetry.enable": false,
-    // "vim.vimrc.enable": true,
-    "vim.leader": ",",
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<ESC>"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<"
-            ],
-            "after": [
-                "<",
-                "g",
-                "v",
-            ]
-        },
-        {
-            "before": [
-                ">"
-            ],
-            "after": [
-                ">",
-                "g",
-                "v",
-            ]
-        },
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // Switching between window
-        {
-            "before": [
-                "<C-h>"
-            ],
-            "after": [
-                "<C-w>",
-                "h"
-            ]
-        },
-        {
-            "before": [
-                "<C-j>"
-            ],
-            "after": [
-                "<C-w>",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                "<C-k>"
-            ],
-            "after": [
-                "<C-w>",
-                "k"
-            ]
-        },
-        {
-            "before": [
-                "<C-l>"
-            ],
-            "after": [
-                "<C-w>",
-                "l"
-            ]
-        },
-        //  Tab switching
-        {
-            "before": [
-                "t",
-                "n"
-            ],
-            "commands": [
-                ":tabnew"
-            ]
-        },
-        {
-            "before": [
-                "t",
-                "k"
-            ],
-            "commands": [
-                ":tabnext"
-            ]
-        },
-        {
-            "before": [
-                "t",
-                "j"
-            ],
-            "commands": [
-                ":tabprev"
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "t",
-                "o"
-            ],
-            "commands": [
-                ":tabo"
-            ]
-        },
-        {
-            "before": [
-                "t",
-                "x"
-            ],
-            "commands": [
-                ":tabclose"
-            ]
-        },
-        // Split window easlier
-        {
-            "before": [
-                "v",
-                "s"
-            ],
-            "commands": [
-                ":vs"
-            ]
-        },
-        {
-            "before": [
-                "s",
-                "p"
-            ],
-            "commands": [
-                ":sp"
-            ]
-        },
-        // Telescope 
-        {
-            "before": [
-                "<Leader>",
-                "f",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.showCommands",
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "f",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.quickOpen",
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "f",
-                "g"
-            ],
-            "commands": [
-                "workbench.action.terminal.searchWorkspace",
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "f",
-                "z"
-            ],
-            "commands": [
-                "workbench.action.gotoSymbol",
-            ]
-        },
-        // LSP
-        {
-            "before": [
-                "g",
-                "i"
-            ],
-            "commands": [
-                "editor.action.goToImplementation",
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "r"
-            ],
-            "commands": [
-                "references-view.findReferences",
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "l"
-            ],
-            "commands": [
-                "editor.action.showHover",
-            ]
-        },
-        {
-            "before": [
-                "[",
-                "c"
-            ],
-            "commands": [
-                "workbench.action.editor.nextChange",
-            ]
-        },
-        {
-            "before": [
-                "]",
-                "c"
-            ],
-            "commands": [
-                "workbench.action.editor.previousChange",
-            ]
-        },
-        {
-            "before": [
-                "[",
-                "d"
-            ],
-            "commands": [
-                "editor.action.marker.next",
-            ]
-        },
-        {
-            "before": [
-                "]",
-                "d"
-            ],
-            "commands": [
-                "editor.action.marker.previous",
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "r",
-                "n"
-            ],
-            "commands": [
-                "workbench.action.rename",
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "x",
-                "x"
-            ],
-            "commands": [
-                "workbench.actions.view.problems",
-            ]
-        },
-        // Format document
-        {
-            "before": [
-                "<Leader>",
-                "p",
-            ],
-            "commands": [
-                "editor.action.formatDocument",
-            ]
-        },
-    ],
-    "editor.fontFamily": "DaddyTimeMono Nerd Font",
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.renderLineHighlight": "none",
+  "vim.leader": ",",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // vim
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<ESC>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Switching between window
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    //  Tab switching
+    {
+      "before": ["t", "n"],
+      "commands": [":tabnew"]
+    },
+    {
+      "before": ["t", "k"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["t", "j"],
+      "commands": [":tabprev"]
+    },
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    },
+    {
+      "before": ["t", "x"],
+      "commands": [":tabclose"]
+    },
+    // Split window easlier
+    {
+      "before": ["v", "s"],
+      "commands": [":vs"]
+    },
+    {
+      "before": ["s", "p"],
+      "commands": [":sp"]
+    },
+    // Telescope
+    {
+      "before": ["<Leader>", "f", "h"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<Leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<Leader>", "f", "g"],
+      "commands": ["workbench.action.terminal.searchWorkspace"]
+    },
+    {
+      "before": ["<Leader>", "f", "z"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    // LSP
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["references-view.findReferences"]
+    },
+    {
+      "before": ["g", "l"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["[", "c"],
+      "commands": ["workbench.action.editor.nextChange"]
+    },
+    {
+      "before": ["]", "c"],
+      "commands": ["workbench.action.editor.previousChange"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.previous"]
+    },
+    {
+      "before": ["<Leader>", "r", "n"],
+      "commands": ["workbench.action.rename"]
+    },
+    {
+      "before": ["<Leader>", "x", "x"],
+      "commands": ["workbench.actions.view.problems"]
+    },
+    // Format document
+    {
+      "before": ["<Leader>", "p"],
+      "commands": ["editor.action.formatDocument"]
+    }
+  ]
+}

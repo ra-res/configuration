@@ -1,7 +1,7 @@
 syntax on
 
-set expandtab
 set ai
+set number
 set relativenumber
 set hlsearch
 set ruler
@@ -12,6 +12,8 @@ set re=2
 set timeout ttimeout
 set timeoutlen=500
 set ttimeoutlen=20
+set tabstop=4
+set expandtab
 
 filetype plugin on
 filetype plugin indent on 
@@ -26,6 +28,10 @@ vmap > >gv
 " Navigate buffers
 noremap <Tab> :bnext<CR>
 noremap <S-Tab> :bprevious<CR>
+
+noremap tj :bprevious<CR>
+noremap tk :bnext<CR>
+
 noremap <C-x> :Bdelete!<CR>
 
 " Navigate windows
@@ -39,7 +45,7 @@ nnoremap vs :vs<CR>
 nnoremap sp :sp<CR>
 
 set background=dark
-colorscheme peachpuff
+colorscheme desert
 
 """" JUNK """"
 """Cursor settings:

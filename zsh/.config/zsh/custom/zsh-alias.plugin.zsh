@@ -1,8 +1,4 @@
 #!/bin/sh
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-alias nvimrc='nvim ~/.config/nvim/'
-alias nvimplugins='nvim ~/.local/share/nvim/site/pack/packer/start'
-
 alias l='ls -all'
 
 # Colorize grep output (good for log files)
@@ -24,11 +20,6 @@ alias psmem='ps auxf | sort -nr -k 4 | head -5'
 
 # get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
-
-# systemd
-alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
-
-alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh""
 
 # git
 alias gs="git status"

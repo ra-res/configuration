@@ -45,7 +45,9 @@ nnoremap vs :vs<CR>
 nnoremap sp :sp<CR>
 
 set background=dark
-colorscheme desert
+colorscheme default 
+
+highlight Comment ctermfg=green
 
 """" JUNK """"
 """Cursor settings:

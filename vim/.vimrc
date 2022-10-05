@@ -12,7 +12,8 @@ set re=2
 set timeout ttimeout
 set timeoutlen=500
 set ttimeoutlen=20
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 
 filetype plugin on

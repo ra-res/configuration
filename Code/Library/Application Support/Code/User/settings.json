@@ -2,6 +2,8 @@
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "relative",
   "editor.renderLineHighlight": "none",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
   "vim.easymotion": true,
   "vim.leader": ",",
   "[jsonc]": {

@@ -1,5 +1,6 @@
 .zsh_sessions
 .zsh_history
 .zcomp*
+.z
 
 custom/plugins/

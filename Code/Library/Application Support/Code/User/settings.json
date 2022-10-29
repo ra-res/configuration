@@ -4,6 +4,9 @@
   "editor.renderLineHighlight": "none",
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
+  "errorLens.messageTemplate": "▪ $message",
+  "errorLens.margin": "2ch",
+  "errorLens.messageBackgroundMode": "none",
   "vim.easymotion": true,
   "vim.leader": ",",
   "[jsonc]": {
@@ -140,12 +143,12 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.autoSave": "afterDelay",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.autoSave": "afterDelay"
 }

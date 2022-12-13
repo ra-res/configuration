@@ -1,8 +1,6 @@
 {
-  
-  // GITLENS
-  "gitlens.currentLine.enabled": false,  
-
+  // "java.format.settings.url": "~/.vscode/eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle",
   // ERRORLENS
   "errorLens.messageTemplate": "▪ $message",
   "errorLens.margin": "2ch",
@@ -237,5 +235,18 @@
   "files.autoSave": "afterDelay",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "window.zoomLevel": 1,
+  "editor.wordWrap": "off",
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
   },
 }

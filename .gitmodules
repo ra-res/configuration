@@ -1,6 +1,0 @@
-[submodule "peachpuff-vscode"]
-	path = peachpuff-vscode
-	url = https://github.com/ra-res/peachpuff-vscode
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/ra-res/nvim

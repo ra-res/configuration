@@ -46,11 +46,10 @@ nnoremap vs :vs<CR>
 nnoremap sp :sp<CR>
 
 set background=dark
-colorscheme default 
+colorscheme desert
 
 highlight Comment ctermfg=green
 
-"""" JUNK """"
 """Cursor settings:
 "  1 -> blinking block
 "  2 -> solid block 
@@ -76,21 +75,3 @@ endif
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-"""
-" call plug#begin()
-" call plug#end()
-
-" set termguicolors
-
-"colorscheme desert 
-
-" Install plug-vim if not found
-" if empty(glob('~/.vim/autoload/plug.vim'))
-"   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-"     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" endif
-
-"  Run PlugInstall if there are missing plugins
-" autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-"   \| PlugInstall --sync | source $MYVIMRC
-" \| endif

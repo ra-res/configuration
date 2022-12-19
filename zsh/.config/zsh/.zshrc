@@ -11,16 +11,14 @@ alias gc="git commit"
 alias gp="git push"
 alias gr="git rebase -i"
 alias python='python3'
-alias matlab=matlab -nodisplay -nosplash -nodesktop
+alias matlab="matlab -nodisplay -nosplash -nodesktop"
 alias ls='ls -G'
 
 zstyle ':omz:update' mode disabled  # disable automatic updates
 ZSH_THEME="robbyrussell"
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
+
 plugins=(
     git
     z

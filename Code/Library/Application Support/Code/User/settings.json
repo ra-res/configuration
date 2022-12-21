@@ -7,9 +7,6 @@
   "errorLens.messageBackgroundMode": "none",
   "vim.easymotion": true,
   "vim.leader": ",",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   // VIM
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -75,23 +72,6 @@
       "before": ["s", "p"],
       "commands": [":sp"]
     },
-    // Telescope
-    {
-      "before": ["<Leader>", "f", "h"],
-      "commands": ["workbench.action.showCommands"]
-    },
-    {
-      "before": ["<Leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["<Leader>", "f", "g"],
-      "commands": ["workbench.action.terminal.searchWorkspace"]
-    },
-    {
-      "before": ["<Leader>", "f", "z"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
     // LSP
     {
       "before": ["g", "i"],
@@ -120,14 +100,6 @@
     {
       "before": ["]", "d"],
       "commands": ["editor.action.marker.previous"]
-    },
-    {
-      "before": ["<Leader>", "r", "n"],
-      "commands": ["workbench.action.rename"]
-    },
-    {
-      "before": ["<Leader>", "x", "x"],
-      "commands": ["workbench.actions.view.problems"]
     },
     // Format document
     {
@@ -163,66 +135,37 @@
   "workbench.editor.showTabs": true,
   "workbench.list.smoothScrolling": true,
   "workbench.statusBar.visible": false,
-  "workbench.colorCustomizations": {
-    "focusBorder": "#ff000000",
-    "scrollbar.shadow": "#ffffff00",
-    // "widget.shadow": "#ffffff00",
-    // "list.activeSelectionBackground": "#10101000",
-    // "list.inactiveSelectionBackground": "#10101000",
-    // "list.inactiveSelectionForeground": "#1DF3FC",
-    // "sideBar.border": "#ffffff28",
-    "editorCursor.foreground": "#DEC0E9",
-    // "workbench.statusBar.visible": false,
-    // "workbench.editor.showTabs": false,
-    "workbench.list.smoothScrolling": true,
-    "scrollbarSlider.background": "#0000001a",
-    // "minimapSlider.background": "#0000001a",
-    "scrollbarSlider.hoverBackground": "#00000028",
-    // "minimapSlider.hoverBackground": "#00000028",
-    "scrollbarSlider.activeBackground": "#00000028",
-    // "minimapSlider.activeBackground": "#00000028",
-    // "minimap.errorHighlight": "#ff0000",
-    // "minimap.selectionHighlight": "#090909a3",
-    // "editor.lineHighlightBorder": "#DEC0E9",
-    // "editorOverviewRuler.background": "#161618",
-    // "terminal.background": "#161618",
-    // "peekViewEditor.background": "#161618",
-    // "peekView.border": "#ffffff28",
-    // "peekViewEditor.matchHighlightBorder": "#12131500",
-    // "peekViewEditor.matchHighlightBackground": "#12131500",
-    // "peekViewResult.background": "#161618",
-    // "peekViewResult.selectionForeground": "#161618",
-    // "peekViewResult.fileForeground": "#161618",
-    // "peekViewResult.selectionBackground": "#161618",
-    // "peekViewResult.matchHighlightBackground": "#12131500",
-    // "peekViewResult.lineForeground": "#ffffff7b",
-    // "peekViewTitle.background": "#121315",
-    // "peekViewEditorGutter.background": "#161618",
-    "editorOverviewRuler.border": "#12131500",
-},
-  "editor.minimap.enabled": false,
-  "editor.fontWeight": "bold",
-  "editor.accessibilitySupport": "off",
-  "editor.autoClosingBrackets": "always",
-  "editor.padding.top": 5,
-  "editor.inlineSuggest.enabled": true,
-  "editor.scrollbar.verticalScrollbarSize": 12,
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.cursorSmoothCaretAnimation": true,
+//   "workbench.colorCustomizations": {
+//     "focusBorder": "#ff000000",
+//     "scrollbar.shadow": "#ffffff00",
+//     "editorCursor.foreground": "#DEC0E9",
+//     "workbench.list.smoothScrolling": true,
+//     "scrollbarSlider.background": "#0000001a",
+//     "scrollbarSlider.hoverBackground": "#00000028",
+//     "scrollbarSlider.activeBackground": "#00000028",
+//     "editorOverviewRuler.border": "#12131500",
+// },
+  // "editor.minimap.enabled": true,
+  // "editor.autoClosingBrackets": "always",
+  // "editor.padding.top": 5,
+  // "editor.inlineSuggest.enabled": true,
+  // "editor.scrollbar.verticalScrollbarSize": 12,
+  // "editor.scrollbar.vertical": "hidden",
+  // "editor.scrollbar.horizontal": "hidden",
+  // "editor.cursorSmoothCaretAnimation": true,
   // "editor.minimap.scale": 1,
-  "editor.fontLigatures": true,
+  // "editor.fontLigatures": true,
   "editor.fontSize": 15,
   // "editor.minimap.renderCharacters": false,
-  "editor.lineHeight": 1.3,
+  // "editor.lineHeight": 1.8,
   "editor.scrollBeyondLastLine": false,
-  "editor.renderWhitespace": "none",
+  // "editor.renderWhitespace": "none",
   "editor.smoothScrolling": true,
-  "editor.rulers": [],
+  // "editor.rulers": [],
   "editor.lineNumbers": "relative",
-  "editor.renderLineHighlight": "none",
-  "editor.cursorBlinking": "solid",
-  "editor.cursorWidth": 2,
+  // "editor.renderLineHighlight": "none",
+  // "editor.cursorBlinking": "solid",
+  // "editor.cursorWidth": 2,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": false,
   "editor.guides.bracketPairsHorizontal": false,
@@ -231,7 +174,8 @@
   // "editor.unicodeHighlight.allowedCharacters": {
   //   "ˆ": true,
   // },
-  "editor.fontFamily": "JetBrains Mono",
+  // "editor.fontFamily": "JetBrains Mono",
+  // "editor.fontWeight": "bold",
   "files.autoSave": "afterDelay",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -242,8 +186,7 @@
   "[java]": {
     "editor.defaultFormatter": "redhat.java"
   },
-  "window.zoomLevel": 1,
-  "editor.wordWrap": "off",
+  // "editor.wordWrap": "off",
   "files.watcherExclude": {
     "**/.bloop": true,
     "**/.metals": true,

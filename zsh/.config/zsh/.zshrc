@@ -20,13 +20,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
 
 plugins=(
-    git
     z
     vi-mode
-    # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    # zsh-autosuggestions
-    # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    # zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

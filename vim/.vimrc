@@ -33,7 +33,7 @@ noremap <S-Tab> :bprevious<CR>
 noremap tj :bprevious<CR>
 noremap tk :bnext<CR>
 
-noremap <C-x> :Bdelete!<CR>
+" noremap <C-x> :Bdelete!<CR>
 
 " Navigate windows
 nnoremap <C-h> <C-w>h
@@ -59,16 +59,16 @@ highlight Comment ctermfg=green
 "  6 -> solid vertical bar
 
 "Gnome Terminal
-if has("autocmd")
-  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-  au InsertEnter,InsertChange *
-    \ if v:insertmode == 'i' | 
-    \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-    \ elseif v:insertmode == 'r' |
-    \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-    \ endif
-  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
+" if has("autocmd")
+"   au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+"   au InsertEnter,InsertChange *
+"     \ if v:insertmode == 'i' | 
+"     \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+"     \ elseif v:insertmode == 'r' |
+"     \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+"     \ endif
+"   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+" endif
 
 "MacOS
 "Mode Settings

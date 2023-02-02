@@ -15,7 +15,7 @@ alias matlab="matlab -nodisplay -nosplash -nodesktop"
 alias ls='ls -G'
 
 zstyle ':omz:update' mode disabled  # disable automatic updates
-ZSH_THEME="robbyrussell"
+ZSH_THEME="eastwood"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
 

@@ -4,6 +4,7 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH" # add openjdk to path
 export PATH="/Applications/MATLAB_R2022b.app/bin:$PATH"
 export PATH="$PATH:/Users/tiny/Library/Application Support/JetBrains/Toolbox/scripts" # Added by Toolbox App
+export PATH="$PATH:/Users/tiny/programming/information-retrival/search_exercise/elasticsearch-7.17.5/bin"
 export EDITOR="vi"
 
 alias gs="git status"
@@ -23,6 +24,10 @@ ZSH_CUSTOM=$ZDOTDIR/custom
 plugins=(
     z
     vi-mode
+    # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    zsh-autosuggestions
+    # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+     zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

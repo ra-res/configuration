@@ -1,4 +1,8 @@
 {
+  // antlr4
+  "antlr4.generation": {
+    "mode": "none"
+  },
   "java.format.settings.profile": "GoogleStyle",
   // ERRORLENS
   "errorLens.messageTemplate": "▪ $message",
@@ -107,8 +111,6 @@
     }
   ],
 
-  "workbench.list.smoothScrolling": true,
-  // "workbench.statusBar.visible": false,
   "editor.fontSize": 15,
   "editor.scrollBeyondLastLine": false,
   "editor.smoothScrolling": true,
@@ -148,4 +150,10 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
+  "editor.fontFamily": "SF Mono",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "prettier.quoteProps": "preserve",
+  "workbench.activityBar.visible": false
 }

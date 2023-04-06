@@ -151,7 +151,8 @@
     "**/.ammonite": true
   },
   "editor.fontFamily": "PT Mono",
-  "editor.lineHeight": 0,
+  "editor.lineHeight": 1.35,
+  "editor.guides.indentation": false,
   "[python]": {
     "editor.formatOnType": true
   },

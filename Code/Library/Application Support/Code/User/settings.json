@@ -150,10 +150,13 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "editor.fontFamily": "SF Mono",
+  "editor.fontFamily": "PT Mono",
+  "editor.lineHeight": 0,
   "[python]": {
     "editor.formatOnType": true
   },
   "prettier.quoteProps": "preserve",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "window.zoomLevel": 3
 }

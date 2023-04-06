@@ -15,13 +15,14 @@ alias python='python3'
 alias matlab="matlab -nodisplay -nosplash -nodesktop"
 alias ls='ls -G'
 zstyle ':omz:update' mode disabled  # disable automatic updates
-# ZSH_THEME="eastwood"
-ZSH_THEME="af-magic"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="af-magic"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
 VI_MODE_SET_CURSOR=true
 
 plugins=(
+    fzf
     z
     vi-mode
     # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -31,3 +32,4 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fzf

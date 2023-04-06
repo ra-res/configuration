@@ -15,6 +15,7 @@ set ttimeoutlen=20
 set shiftwidth=2
 set tabstop=2
 set expandtab
+set showtabline=2
 
 filetype plugin on
 filetype plugin indent on 
@@ -30,8 +31,9 @@ vmap > >gv
 noremap <Tab> :bnext<CR>
 noremap <S-Tab> :bprevious<CR>
 
-noremap tj :bprevious<CR>
-noremap tk :bnext<CR>
+noremap tj :tabprev<CR>
+noremap tk :tabnext<CR>
+noremap tn :tabnew<CR>
 
 " noremap <C-x> :Bdelete!<CR>
 
@@ -75,3 +77,6 @@ highlight Comment ctermfg=green
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
+set rtp+=$HOMEBREW_PREFIX/opt/fzf
+

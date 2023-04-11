@@ -1,4 +1,7 @@
 syntax on
+set background=dark
+colorscheme desert
+highlight Comment ctermfg=green
 
 set ai
 set number
@@ -16,6 +19,7 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set showtabline=2
+set swapfile
 
 filetype plugin on
 filetype plugin indent on 
@@ -27,10 +31,12 @@ imap jj <Esc>
 vmap < <gv
 vmap > >gv
 
+
 " Navigate buffers
 noremap <Tab> :bnext<CR>
 noremap <S-Tab> :bprevious<CR>
 
+" Navigate tabs
 noremap tj :tabprev<CR>
 noremap tk :tabnext<CR>
 noremap tn :tabnew<CR>
@@ -46,11 +52,6 @@ nnoremap <C-l> <C-w>l
 " Split window
 nnoremap vs :vs<CR>
 nnoremap sp :sp<CR>
-
-set background=dark
-colorscheme desert
-
-highlight Comment ctermfg=green
 
 """Cursor settings:
 "  1 -> blinking block
@@ -73,10 +74,10 @@ highlight Comment ctermfg=green
 " endif
 
 "MacOS
-"Mode Settings
+" Cursor Mode Settings
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 set rtp+=$HOMEBREW_PREFIX/opt/fzf
-
+noremap <leader>ff :FZF<CR>

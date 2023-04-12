@@ -81,3 +81,4 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 set rtp+=$HOMEBREW_PREFIX/opt/fzf
 noremap <leader>ff :FZF<CR>
+

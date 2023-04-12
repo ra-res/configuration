@@ -222,6 +222,6 @@
       ]
     }
   ],
-  "editor.wordWrap": "off",
+  "editor.wordWrap": "on",
 }
 

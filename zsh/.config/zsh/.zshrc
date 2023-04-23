@@ -15,7 +15,7 @@ alias python='python3'
 alias matlab="matlab -nodisplay -nosplash -nodesktop"
 alias ls='ls -G'
 zstyle ':omz:update' mode disabled  # disable automatic updates
-ZSH_THEME="philips"
+# ZSH_THEME="philips"
 # ZSH_THEME="af-magic"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
@@ -33,3 +33,14 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fzf
+
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
+
+PROMPT='%{$fg[$NCOLOR]%}%Btiny%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%}%B$(git_prompt_info)%(!.#.$) '
+RPROMPT='[%*]'
+
+# git theming
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_no_bold[red]%}%B"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_DIRTY="*"

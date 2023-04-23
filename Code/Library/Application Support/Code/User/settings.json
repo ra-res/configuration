@@ -159,7 +159,6 @@
   "prettier.quoteProps": "preserve",
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Dark+ Experimental",
-  "window.zoomLevel": 1,
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -222,6 +221,7 @@
       ]
     }
   ],
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "off",
+  "window.zoomLevel": -1,
 }
 

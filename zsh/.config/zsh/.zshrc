@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
-PROMPT='%{$fg[$NCOLOR]%}%Btiny%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%}%B$(git_prompt_info)%(!.#.$) '
+PROMPT='%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%}%B$(git_prompt_info) %B%{$fg[blue]%}%(!.#.$)%b%{$reset_color%} '
 RPROMPT='[%*]'
 
 # git theming

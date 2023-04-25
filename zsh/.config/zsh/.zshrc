@@ -44,5 +44,5 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 
-alias l="ls -CAF"
-alias ls="ls -CAF"
+alias l="ls -CAF --color"
+alias ls="ls -CAF --color"

@@ -13,7 +13,6 @@ alias gp="git push"
 alias gr="git rebase -i"
 alias python='python3'
 alias matlab="matlab -nodisplay -nosplash -nodesktop"
-alias ls='ls -G'
 zstyle ':omz:update' mode disabled  # disable automatic updates
 # ZSH_THEME="philips"
 # ZSH_THEME="af-magic"
@@ -44,3 +43,6 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_no_bold[red]%}%B"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
+
+alias l="ls -CAF"
+alias ls="ls -CAF"

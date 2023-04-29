@@ -221,7 +221,7 @@
       ]
     }
   ],
-  "editor.wordWrap": "off",
+  "editor.wordWrap": "on",
   "window.zoomLevel": -1,
 }
 

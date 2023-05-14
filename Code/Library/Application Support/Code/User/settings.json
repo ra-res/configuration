@@ -221,7 +221,8 @@
       ]
     }
   ],
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "off",
   "window.zoomLevel": -1,
+  "terminal.integrated.fontSize": 20, 
 }
 

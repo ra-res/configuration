@@ -13,9 +13,11 @@ alias gp="git push"
 alias gr="git rebase -i"
 alias python='python3'
 alias matlab="matlab -nodisplay -nosplash -nodesktop"
+alias l="ls -CAF --color"
+alias ls="ls -CAF --color"
+
+# Oh My Zsh
 zstyle ':omz:update' mode disabled  # disable automatic updates
-# ZSH_THEME="philips"
-# ZSH_THEME="af-magic"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
 VI_MODE_SET_CURSOR=true
@@ -30,19 +32,18 @@ plugins=(
      zsh-syntax-highlighting
 )
 
+# FZF
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # fzf
 
+# PROMPT
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
-
 PROMPT='%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%}%B$(git_prompt_info) %B%{$fg[blue]%}%(!.#.$)%b%{$reset_color%} '
 RPROMPT='[%*]'
 
-# git theming
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg_no_bold[red]%}%B"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_bold[blue]%})%{$reset_color%}"
+# Git Theme
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_no_bold[red]%}(%B"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_no_bold[red]%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 
-alias l="ls -CAF --color"
-alias ls="ls -CAF --color"

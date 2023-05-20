@@ -23,13 +23,13 @@ ZSH_CUSTOM=$ZDOTDIR/custom
 VI_MODE_SET_CURSOR=true
 
 plugins=(
-    fzf
+    # fzf
     z
     vi-mode
     # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     zsh-autosuggestions
     # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-     zsh-syntax-highlighting
+    # zsh-syntax-highlighting
 )
 
 # FZF
@@ -38,12 +38,12 @@ source $ZSH/oh-my-zsh.sh
 
 # PROMPT
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
-PROMPT='%{$fg[$NCOLOR]%}%B%n@%m%b%{$reset_color%}:%{$fg[blue]%}%B%~%b%{$reset_color%}%B$(git_prompt_info) %B%{$fg[blue]%}%(!.#.$)%b%{$reset_color%} '
+PROMPT='%B%{$fg[$NCOLOR]%}%n@%m%{$reset_color%}:%{$fg[blue]%}%B%~%{$reset_color%}%B$(git_prompt_info) %B%{$fg[blue]%}%(!.#.$)%{$reset_color%} %b'
 RPROMPT='[%*]'
 
 # Git Theme
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_no_bold[red]%}(%B"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%b%{$fg_no_bold[red]%})%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" %b%{$fg_no_bold[red]%}("
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_no_bold[red]%})%{$reset_color%}%b"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 

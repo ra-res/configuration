@@ -58,6 +58,7 @@ nnoremap sp :sp<CR>
 "  2 -> solid block 
 "  3 -> blinking underscore
 "  4 -> solid underscore
+"  ==>
 "  5 -> blinking vertical bar
 "  6 -> solid vertical bar
 

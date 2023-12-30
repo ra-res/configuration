@@ -12,7 +12,7 @@ export SPARK_HOME="/opt/homebrew/Cellar/apache-spark/3.5.0/libexec"
 export JAVA_OPTS='--add-exports java.base/sun.nio.ch=ALL-UNNAMED'
 
 # Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 
 # Uncomment one of the following lines to change the auto-update behavior
 zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -36,8 +36,12 @@ ZSH_CUSTOM=$ZDOTDIR/custom
 
 source $ZSH/oh-my-zsh.sh
 
-# Aliases
+export PROMPT='%F{111}%m:%b%F{2}%~ $%f '
+
+#Aliases
 alias python='python3'
 alias matlab="matlab -nodisplay -nosplash -nodesktop"
-alias l="ls -CAF --color"
-alias ls="ls -CAF --color"
+alias l="ls -CAF --color=auto"
+alias ls="ls -CAF --color=auto"
+alias grep="grep --color=auto"
+

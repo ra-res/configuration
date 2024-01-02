@@ -53,6 +53,8 @@ nnoremap <C-l> <C-w>l
 nnoremap vs :vs<CR>
 nnoremap sp :sp<CR>
 
+nnoremap <leader>b :ls<CR>:b<Space>
+
 """Cursor settings:
 "  1 -> blinking block
 "  2 -> solid block 

@@ -11,6 +11,9 @@ export EDITOR='vim'
 export SPARK_HOME="/opt/homebrew/Cellar/apache-spark/3.5.0/libexec"
 export JAVA_OPTS='--add-exports java.base/sun.nio.ch=ALL-UNNAMED'
 
+HISTSIZE=10000000
+SAVEHIST=10000000
+
 # Themes
 # ZSH_THEME="robbyrussell"
 

@@ -39,7 +39,7 @@ ZSH_CUSTOM=$ZDOTDIR/custom
 
 source $ZSH/oh-my-zsh.sh
 
-export PROMPT='%F{111}%m:%b%F{2}%~ $%f '
+export PROMPT='%B%F{2}%m:%B%F{12}%~ $%f%b '
 
 #Aliases
 alias python='python3'

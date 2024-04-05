@@ -10,12 +10,14 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export EDITOR='vim'
 export SPARK_HOME="/opt/homebrew/Cellar/apache-spark/3.5.0/libexec"
 export JAVA_OPTS='--add-exports java.base/sun.nio.ch=ALL-UNNAMED'
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 HISTSIZE=10000000
 SAVEHIST=10000000
 
 # Themes
 # ZSH_THEME="robbyrussell"
+ZSH_THEME="philips"
 
 # Uncomment one of the following lines to change the auto-update behavior
 zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -31,7 +33,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
 
 # Plugins
-plugins=(git z vi-mode)
+plugins=(git z vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+VI_MODE_SET_CURSOR=true
 
 # Settings
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -39,7 +42,7 @@ ZSH_CUSTOM=$ZDOTDIR/custom
 
 source $ZSH/oh-my-zsh.sh
 
-export PROMPT='%B%F{2}%m:%B%F{12}%~ $%f%b '
+# export PROMPT='%B%F{2}%m:%B%F{12}%c/ $%f%b'
 
 #Aliases
 alias python='python3'

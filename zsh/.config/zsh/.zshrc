@@ -52,4 +52,5 @@ alias ls="ls -CAF --color=auto"
 alias grep="grep --color=auto"
 alias gs='git status'
 alias hrep='history | grep '
+alias cat='bat'
 

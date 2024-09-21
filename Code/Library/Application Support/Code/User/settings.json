@@ -138,16 +138,8 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-
-
-  "editor.fontSize": 20,
-  "editor.scrollBeyondLastLine": false,
-  "editor.smoothScrolling": true,
   "editor.lineNumbers": "relative",
   "files.autoSave": "afterDelay",
-
-  "editor.guides.indentation": false,
-  "prettier.quoteProps": "preserve",
-  "workbench.colorTheme": "One Dark Pro",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 1,
+  "redhat.telemetry.enabled": false,
 }

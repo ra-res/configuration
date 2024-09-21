@@ -12,37 +12,32 @@ export SPARK_HOME="/opt/homebrew/Cellar/apache-spark/3.5.0/libexec"
 export JAVA_OPTS='--add-exports java.base/sun.nio.ch=ALL-UNNAMED'
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-HISTSIZE=10000000
-SAVEHIST=10000000
-
-# Themes
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="philips"
+HISTFILE=".histfile"             # Save 100000 lines of history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 
 # Uncomment one of the following lines to change the auto-update behavior
-zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$ZDOTDIR/custom
 
 # Plugins
 plugins=(git z vi-mode zsh-autosuggestions zsh-syntax-highlighting)
-VI_MODE_SET_CURSOR=true
-
-# Settings
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-ZSH_CUSTOM=$ZDOTDIR/custom
+VI_MODE_SET_CURSOR=false
 
 source $ZSH/oh-my-zsh.sh
-
-# export PROMPT='%B%F{2}%m:%B%F{12}%c/ $%f%b'
+source $HOME/fzf-git.sh
 
 #Aliases
 alias python='python3'
@@ -54,3 +49,24 @@ alias gs='git status'
 alias hrep='history | grep '
 alias cat='bat'
 
+eval "$(fzf --zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
+
+function tn() (
+    if [ -n "$1" ]
+      then
+         tmux switch -t $1
+      else
+         echo "no session name"
+     fi
+  )
+
+ # A Colorful Prompt with OS Version
+autoload -Uz colors
+colors
+bg1='#bdf'; bg2='#259'; bg3='236';
+fg1='#259'; fg2='#bdf'; fg3='245';
+PROMPT_HOSTNAME="%K{$bg1}%F{$fg1} %n %K{$bg2}%F{$bg1}"
+PROMPT_OS_AND_KERNEL="%K{$bg2}%F{$fg2}%m %(!.%K{red}%F{$bg2}.%K{$bg3}%F{$bg2})"
+PROMPT_DIRECTORY="%(!.%K{red}%F{white}.%K{$bg3}%F{$fg3})%1~ %(!.%k%F{red}.%k%F{$bg3}) "
+PROMPT="${PROMPT_HOSTNAME} ${PROMPT_OS_AND_KERNEL} ${PROMPT_DIRECTORY}%f%k"

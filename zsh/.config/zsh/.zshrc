@@ -12,7 +12,7 @@ export SPARK_HOME="/opt/homebrew/Cellar/apache-spark/3.5.0/libexec"
 export JAVA_OPTS='--add-exports java.base/sun.nio.ch=ALL-UNNAMED'
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-HISTFILE=".histfile"             # Save 100000 lines of history
+# HISTFILE=".histfile"             # Save 100000 lines of history
 HISTSIZE=100000
 SAVEHIST=100000
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
@@ -33,7 +33,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM=$ZDOTDIR/custom
 
 # Plugins
-plugins=(git z vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git z vi-mode zsh-autosuggestions zsh-syntax-highlighting aliases alias-finder)
+
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
+
 VI_MODE_SET_CURSOR=false
 
 source $ZSH/oh-my-zsh.sh
@@ -52,21 +58,52 @@ alias cat='bat'
 eval "$(fzf --zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 
-function tn() (
+function tn() {
     if [ -n "$1" ]
       then
          tmux switch -t $1
       else
          echo "no session name"
      fi
-  )
+}
+function tmux_web() {
+  SESSION_NAME=$1
 
- # A Colorful Prompt with OS Version
+	if tmux has-session -t $SESSION_NAME 2>/dev/null; then
+		echo "Session found. Attaching to session '$SESSION_NAME'."
+		tmux attach -t $SESSION_NAME
+	else
+		echo "Session not found. Creating session '$DIR_NAME'."
+    tmux new -s $SESSION_NAME 
+    tmux new-window -t $SESSION_NAME
+    tmux new-window -t $SESSION_NAME
+    tmux select-window -t $SESSION_NAME:2
+    tmux attach -t $SESSION_NAME
+	fi
+}
+
+function tmux.() {
+	# Get the current directory name for the new session base name
+	DIR_NAME=${PWD:t}
+  tmux_web $DIR_NAME
+	echo "Tmux session '$DIR_NAME' started."
+}
+#
+# 
+
+# A Colorful Prompt with OS Version
+set -o promptsubst
 autoload -Uz colors
 colors
-bg1='#bdf'; bg2='#259'; bg3='236';
-fg1='#259'; fg2='#bdf'; fg3='245';
+bg1='#259'; bg2='238'; bg3='236'; bg4='#fff';
+fg1='#cee'; fg2='#ccc'; fg3='248'; fg4='#000';
 PROMPT_HOSTNAME="%K{$bg1}%F{$fg1} %n %K{$bg2}%F{$bg1}"
 PROMPT_OS_AND_KERNEL="%K{$bg2}%F{$fg2}%m %(!.%K{red}%F{$bg2}.%K{$bg3}%F{$bg2})"
-PROMPT_DIRECTORY="%(!.%K{red}%F{white}.%K{$bg3}%F{$fg3})%1~ %(!.%k%F{red}.%k%F{$bg3}) "
-PROMPT="${PROMPT_HOSTNAME} ${PROMPT_OS_AND_KERNEL} ${PROMPT_DIRECTORY}%f%k"
+PROMPT_DIRECTORY="%(!.%K{red}%F{white}.%K{$bg3}%F{$fg3})%1~ %(!.%k%F{red}.%k%F{$bg3})"
+PROMPT='${PROMPT_HOSTNAME} ${PROMPT_OS_AND_KERNEL} ${PROMPT_DIRECTORY}%f%k '
+
+ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_DIRTY="*"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+

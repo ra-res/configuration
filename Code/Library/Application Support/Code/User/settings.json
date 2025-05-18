@@ -1,10 +1,6 @@
 {
-  "errorLens.messageTemplate": "▪ $message",
-  "errorLens.margin": "2ch",
-  "errorLens.messageBackgroundMode": "none",
   "vim.easymotion": true,
   "vim.leader": ",",
-  // VIM
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["j", "j"],
@@ -22,7 +18,6 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    // Switching between window
     {
       "before": ["<C-h>"],
       "after": ["<C-w>", "h"]
@@ -39,7 +34,6 @@
       "before": ["<C-l>"],
       "after": ["<C-w>", "l"]
     },
-    //  Tab switching
     {
       "before": ["t", "n"],
       "commands": [":tabnew"]
@@ -60,7 +54,6 @@
       "before": ["t", "x"],
       "commands": [":tabclose"]
     },
-    // Split window easier
     {
       "before": ["v", "s"],
       "commands": [":vs"]
@@ -69,7 +62,6 @@
       "before": ["s", "p"],
       "commands": [":sp"]
     },
-    // LSP
     {
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
@@ -98,48 +90,12 @@
       "before": ["]", "d"],
       "commands": ["editor.action.marker.previous"]
     },
-    // Format document
     {
       "before": ["<Leader>", "p"],
       "commands": ["editor.action.formatDocument"]
     }
   ],
 
-  // LSP
-  "[svelte]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.inlayHints.parameterNames.enabled": "all",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[java]": {
-    "editor.defaultFormatter": "redhat.java"
-  },
-  "files.watcherExclude": {
-    "**/.bloop": true,
-    "**/.metals": true,
-    "**/.ammonite": true
-  },
   "editor.lineNumbers": "relative",
-  "files.autoSave": "afterDelay",
-  "window.zoomLevel": 1,
-  "redhat.telemetry.enabled": false,
+  "files.autoSave": "afterDelay"
 }

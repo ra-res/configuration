@@ -20,8 +20,9 @@ set tabstop=2
 set expandtab
 set showtabline=2
 set swapfile
+
 set cursorline
-set cursorcolumn 
+set cursorcolumn
 set visualbell
 
 filetype plugin on
@@ -56,14 +57,11 @@ nnoremap <C-l> <C-w>l
 nnoremap vs :vs<CR>
 nnoremap sp :sp<CR>
 
-nnoremap <leader>b :ls<CR>:b<Space>
-
 """Cursor settings:
 "  1 -> blinking block
 "  2 -> solid block 
 "  3 -> blinking underscore
 "  4 -> solid underscore
-"  ==>
 "  5 -> blinking vertical bar
 "  6 -> solid vertical bar
 
@@ -84,7 +82,4 @@ nnoremap <leader>b :ls<CR>:b<Space>
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-
-set rtp+=$HOMEBREW_PREFIX/opt/fzf
-noremap <leader>ff :FZF<CR>
 

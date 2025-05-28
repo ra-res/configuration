@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
-export FZF_DEFAULT_OPTS='--layout=reverse --color=light'
+export FZF_DEFAULT_OPTS='--layout=reverse'
 
 # Settings
 # HISTFILE=".histfile"             # Save 100000 lines of history

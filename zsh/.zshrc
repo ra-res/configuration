@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 export FZF_DEFAULT_OPTS='--layout=reverse'
+export PATH="$HOME/Projects/ghidra/ghidraRun:$PATH"
 
 # Settings
 # HISTFILE=".histfile"             # Save 100000 lines of history
@@ -43,9 +44,6 @@ eval "$(~/.local/bin/mise activate zsh)"
 # Theme
 autoload -Uz vcs_info
 precmd() { vcs_info }
-
-zstyle ':vcs_info:git:*' formats '%b '
-
+zstyle ':vcs_info:git:*' formats '(%b)'
 setopt PROMPT_SUBST
-PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
-
+PROMPT='%n@%m:%F{cyan}%~%f${vcs_info_msg_0_}$ '

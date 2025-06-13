@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+find "$@" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
+    session_name=$(basename "$dir" | tr . _)
+    
+    if ! tmux has-session -t="$session_name" 2> /dev/null; then
+        tmux new-session -ds "$session_name" -c "$dir"
+        echo "Created session: $session_name"
+    else
+        echo "Session already exists: $session_name"
+    fi
+done
+
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -n $tmux_running ]]; then
+    tmux attach
+fi

@@ -11,4 +11,5 @@ git clone https://github.com/ra-res/configuration.git ~
 Run `stow` to symlink the directories, e.g.
 ```shell
 stow zsh
+stow herdr
 ```
